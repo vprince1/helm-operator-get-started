@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: vprince/podinfo
-      tag: dev-vj1
+      tag: dev-vj2
     replicaCount: 1
     hpa:
       enabled: false
