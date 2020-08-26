@@ -1,0 +1,20 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: podinfo-prod
+  namespace: prod
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: semver:~0.1
+spec:
+  releaseName: podinfo-prod
+  chart:
+    git: git@github.com:vprince1/helm-operator-get-started
+    path: charts/podinfo
+    ref: master
+  values:
+    image:
+      repository: vprince/podinfo
+      tag: 0.1.0
+    replicaCount: 1
