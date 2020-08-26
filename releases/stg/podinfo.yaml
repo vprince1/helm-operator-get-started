@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: vprince/podinfo
-      tag: dev-f8hpzacz
+      tag: dev-vj1
     replicaCount: 1
     hpa:
       enabled: true
