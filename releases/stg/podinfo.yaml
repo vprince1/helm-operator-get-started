@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: vprince/podinfo
-      tag: stg-vj1
+      tag: stg-vj2
     replicaCount: 1
     hpa:
       enabled: true
