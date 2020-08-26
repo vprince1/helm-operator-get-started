@@ -6,18 +6,18 @@ metadata:
   namespace: stg
   annotations:
     fluxcd.io/automated: "true"
-    filter.fluxcd.io/chart-image: glob:stg-*
+    filter.fluxcd.io/chart-image: glob:dev-*
 spec:
   releaseName: podinfo-rc
   chart:
-    git: git@github.com:fluxcd/helm-operator-get-started
+    git: git@github.com:vprince1/helm-operator-get-started
     path: charts/podinfo
     ref: master
   values:
     image:
-      repository: stefanprodan/podinfo
-      tag: stg-9ij63o4c
-    replicaCount: 2
+      repository: vprince/podinfo
+      tag: dev-f8hpzacz
+    replicaCount: 1
     hpa:
       enabled: true
       maxReplicas: 10
